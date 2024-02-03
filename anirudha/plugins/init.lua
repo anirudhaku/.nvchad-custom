@@ -1,4 +1,4 @@
-local overrides = require("custom.anirudha.configs.overrides")
+local overrides = require("custom.anirudha.plugins.configs.overrides")
 
 local plugins = {
   {
@@ -11,13 +11,13 @@ local plugins = {
       {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
-          require "custom.anirudha.configs.null-ls"
+          require "custom.anirudha.plugins.configs.null-ls"
         end
       }
     },
     config = function()
       require "plugins.configs.lspconfig"
-      require "custom.anirudha.configs.lspconfigs"
+      require "custom.anirudha.plugins.configs.lspconfigs"
     end,
   },
   {
