@@ -10,5 +10,6 @@ lspconfig.clangd.setup {
     on_attach(client, bufnr)
   end,
   cmd = { "clangd" },
-  capabilities = capabilities
+  capabilities = capabilities,
+  filetypes = { "cpp" }
 }
