@@ -75,4 +75,33 @@ M.nvimcmp = {
   }
 }
 
+M.telescope = {
+  extensions_list = {
+    "smart_history",
+  },
+  defaults = {
+    mappings = {
+      n = {
+        ["<C-Down>"] = require("telescope.actions").cycle_history_next,
+        ["<C-Up>"] = require("telescope.actions").cycle_history_prev,
+      },
+      i = {
+        ["<C-Down>"] = require("telescope.actions").cycle_history_next,
+        ["<C-Up>"] = require("telescope.actions").cycle_history_prev,
+      },
+    },
+  },
+  pickers = {
+    buffers = {
+      show_all_buffers = true,
+      sort_lastused = true,
+      mappings = {
+        n = {
+          ["x"] = "delete_buffer",
+        }
+      }
+    }
+  },
+}
+
 return M

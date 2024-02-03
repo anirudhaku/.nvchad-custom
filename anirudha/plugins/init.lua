@@ -61,7 +61,19 @@ local plugins = {
   {
     "hrsh7th/nvim-cmp",
     opts = overrides.nvimcmp
-  }
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      {
+        "nvim-telescope/telescope-smart-history.nvim",
+        dependencies = {
+          "kkharji/sqlite.lua"
+        }
+      }
+    },
+    opts = overrides.telescope
+  },
 }
 
 return plugins

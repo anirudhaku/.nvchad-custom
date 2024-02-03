@@ -32,6 +32,8 @@ M.ui = {
     end
   }
 }
+
 M.plugins = "custom.anirudha.plugins"
+M.mappings = require("custom.anirudha.core.mappings")
 
 return M
