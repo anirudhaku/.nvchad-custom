@@ -7,10 +7,11 @@
     |   |   |- mappings.lua - Contains mapping overrides for NvChad.
     |   |   +- statusline.lua - NvChad compatible status line module.
     |   |
-    |   |- core - Contains nvim core settings.
+    |   |- core - Contains nvim core settings and raw lua scripts.
     |   |   |- init.lua - Sources nvim core settings.
     |   |   |- keymaps.lua - Contains personal nvim key-bindings.
-    |   |   +- options.lua - Contains personal nvim options and settings.
+    |   |   |- options.lua - Contains personal nvim options and settings.
+    |   |   +- build_cscope.lua - Script to build cscope db.
     |   |
     |   |- plugins - Contains list of plugins to be loaded.
     |   |   |- configs - Contains config overrides for plugins.
