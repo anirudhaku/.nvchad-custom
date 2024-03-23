@@ -100,7 +100,17 @@ M.telescope = {
           ["x"] = "delete_buffer",
         }
       }
-    }
+    },
+    diagnostics = {
+      layout_strategy = 'vertical',
+      layout_config = {
+        height = 0.95,
+        mirror = true,
+        prompt_position = 'top',
+        preview_cutoff = 1,
+        preview_height = 0.5,
+      },
+    },
   },
 }
 

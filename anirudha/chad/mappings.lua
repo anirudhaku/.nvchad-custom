@@ -43,12 +43,27 @@ M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
   n = {
+    ["gd"] = {
+      function()
+        require('telescope.builtin').lsp_definitions()
+      end,
+      "LSP definition",
+    },
+
     ["gr"] = {
       function()
         require('telescope.builtin').lsp_references()
       end,
       "LSP references in Telescope",
     },
+
+    ["<leader>q"] = {
+      function()
+        require('telescope.builtin').diagnostics { bufnr = 0 }
+      end,
+      "Diagnostic setloclist",
+    },
+
   },
 }
 
