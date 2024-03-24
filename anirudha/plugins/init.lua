@@ -29,32 +29,6 @@ local plugins = {
     opts = overrides.treesitter
   },
   {
-    "dhananjaylatkar/cscope_maps.nvim",
-    dependencies = {
-      -- optional [for whichkey hints]
-      "folke/which-key.nvim",
-      -- optional [for picker="telescope"]
-      "nvim-telescope/telescope.nvim",
-      -- optional [for devicons in telescope or fzf]
-      "nvim-tree/nvim-web-devicons"
-    },
-    ft = {
-      "cpp",
-      "cfg",
-      "proto"
-    },
-    opts = {
-      -- Don't prompt when invoked through shortcuts!
-      skip_input_prompt = true,
-      cscope = {
-        picker = "telescope",
-        db_build_cmd_args = {
-          "-bq"
-        }
-      }
-    }
-  },
-  {
     "windwp/nvim-autopairs",
     enabled = false
   },
@@ -73,6 +47,65 @@ local plugins = {
       }
     },
     opts = overrides.telescope
+  },
+  {
+    "dhananjaylatkar/cscope_maps.nvim",
+    dependencies = {
+      -- optional [for whichkey hints]
+      "folke/which-key.nvim",
+      -- optional [for picker="telescope"]
+      "nvim-telescope/telescope.nvim",
+      -- optional [for devicons in telescope or fzf]
+      "nvim-tree/nvim-web-devicons"
+    },
+    ft = {
+      "cpp",
+      "cfg",
+      "proto",
+      "json",
+      "default",
+    },
+    opts = {
+      -- Don't prompt when invoked through shortcuts!
+      skip_input_prompt = true,
+      cscope = {
+        picker = "telescope",
+        db_build_cmd_args = {
+          "-bq"
+        }
+      }
+    }
+  },
+  {
+    dir = vim.fn.stdpath("config") .. "/lua/custom/anirudha/plugins/local/build_cscope.nvim",
+    dependencies = {
+      "dhananjaylatkar/cscope_maps.nvim"
+    },
+    ft = {
+      "cpp",
+      "cfg",
+      "proto",
+      "json",
+      "default",
+    },
+    opts = {
+      file_types = {
+        "c",
+        "cc",
+        "cpp",
+        "h",
+        "hh",
+        "hpp",
+        "json",
+        "cfg",
+        "default",
+        "proto",
+      },
+      ignore_paths = {
+        "./build*",
+        "./.tup",
+      },
+    },
   },
 }
 

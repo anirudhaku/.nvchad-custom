@@ -13,15 +13,17 @@
     |   |   |- options.lua - Contains personal nvim options and settings.
     |   |   +- build_cscope.lua - Script to build cscope db.
     |   |
-    |   |- plugins - Contains list of plugins to be loaded.
-    |   |   |- configs - Contains config overrides for plugins.
-    |   |   |   |- ... -
-    |   |   |   |- ... - Individual plugin config override files.
-    |   |   |   |- ... -
-    |   |   |   +- overrides.lua - Table of all plugin specific overrides.
-    |   |   |
-    |   |   +- init.lua - Lazy/NvChad compatible table of all plugins to
-    |   |                 be loaded along with their config overrides.
+    |   +- plugins - Contains list of plugins to be loaded.
+    |       |- configs - Contains config overrides for plugins.
+    |       |   |- ... -
+    |       |   |- ... - Individual plugin config override files.
+    |       |   |- ... -
+    |       |   +- overrides.lua - Table of all plugin specific overrides.
+    |       |
+    |       |- local - Contains local plugins.
+    |       |
+    |       +- init.lua - Lazy/NvChad compatible table of all plugins to
+    |                     be loaded along with their config overrides.
     |
     |- chadrc.lua - Sources stuff in anirudha/chad.
     +- init.lua - Sources personal setting for nvim (requires only).
