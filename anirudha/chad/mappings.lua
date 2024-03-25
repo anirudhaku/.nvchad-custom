@@ -47,7 +47,7 @@ M.lspconfig = {
       function()
         require('telescope.builtin').lsp_definitions()
       end,
-      "LSP definition",
+      "LSP definitions in Telescope",
     },
 
     ["gr"] = {
@@ -61,7 +61,7 @@ M.lspconfig = {
       function()
         require('telescope.builtin').diagnostics { bufnr = 0 }
       end,
-      "Diagnostic setloclist",
+      "LSP Diagnostics in Telescope",
     },
 
   },
