@@ -1,3 +1,7 @@
+**This config is obsolete now. NcChad directory organization has been changed and this repo doeesn't work anymore.**
+
+Replacement: https://github.com/anirudhaku/nvim_config
+
 # Directory structure:
 ```
  - ROOT
